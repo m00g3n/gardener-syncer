@@ -1,7 +1,7 @@
 module-name: kim-snatch
 kind: kyma
 bdba:
-  - europe-docker.pkg.dev/kyma-project/prod/gardener-syncer:0.1.0
+  - europe-docker.pkg.dev/kyma-project/prod/gardener-syncer:0.2.0
 mend:
   language: golang-mod
   exclude:
