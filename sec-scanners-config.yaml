@@ -1,0 +1,12 @@
+module-name: kim-snatch
+kind: kyma
+bdba:
+  - europe-docker.pkg.dev/kyma-project/prod/gardener-syncer:0.1.0
+mend:
+  language: golang-mod
+  exclude:
+    - "**/*_test.go"
+checkmarx-one:
+    preset: go-default
+    exclude:
+        - '**/*_test.go'
