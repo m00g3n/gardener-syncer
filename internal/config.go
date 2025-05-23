@@ -78,7 +78,7 @@ func (c *Config) Validate() error {
 	return nil
 }
 
-var (
+const (
 	FlagNameGardenerKubeconfigPath            = "gardener-kubeconfig-path"
 	FlagNameGardenerSeedConfigMapName         = "gardener-seed-map-name"
 	FlagNameGardenerSeedConfigMapNamespace    = "gardener-seed-map-namespace"
