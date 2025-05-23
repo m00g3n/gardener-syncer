@@ -45,7 +45,7 @@ jobs:
     uses: kyma-project/test-infra/.github/workflows/image-builder.yml@main # Usage: kyma-project/test-infra/.github/workflows/image-builder.yml@main
     with:
       name: gardener-syncer
-      dockerfile: Dockerfile.job
+      dockerfile: Dockerfile
       context: ./
       export-tags: false
       tags: |
