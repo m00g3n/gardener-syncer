@@ -3,6 +3,7 @@ package cli
 import (
 	"flag"
 	"fmt"
+	"log/slog"
 	"time"
 
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -102,6 +103,13 @@ func NewConfigFromFlags() (Config, error) {
 	if err := out.Validate(); err != nil {
 		return Config{}, err
 	}
+
+	slog.Info("configuration parsed",
+		FlagNameGardenerKubeconfigPath, out.Gardener.KubeconfigPath,
+		FlagNameGardenerSeedConfigMapName, out.Gardener.SeedMapName,
+		FlagNameGardenerSeedConfigMapNamespace, out.Gardener.SeedMapNamespace,
+		FlagNameGardenerTimeout, out.Gardener.Timeout,
+	)
 
 	return out, nil
 }

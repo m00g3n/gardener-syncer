@@ -1,6 +1,7 @@
 package seeker
 
 import (
+	"log/slog"
 	"strings"
 
 	"sigs.k8s.io/yaml"
@@ -35,6 +36,7 @@ func seedCanBeUsed(seed *gardener_types.Seed) bool {
 func ToProviderRegions(seeds []gardener_types.Seed) types.Providers {
 	result := types.Providers{}
 	for _, seed := range seeds {
+		slog.Debug("checking seed", "seedName", seed.Name)
 		if seedCanBeUsed(&seed) {
 			result.Add(
 				seed.Spec.Provider.Type,
