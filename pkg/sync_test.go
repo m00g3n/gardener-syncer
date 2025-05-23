@@ -30,7 +30,7 @@ func TestBuildSyncFn(t *testing.T) {
 			name:        "store error",
 			fetch:       buildFetch(types.Providers{}),
 			store:       buildStoreWithError(errStoreFailedTest),
-			expectedErr: errSoreFailedTest,
+			expectedErr: errStoreFailedTest,
 		},
 		{
 			name:  "OK",
