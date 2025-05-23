@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	errSoreFailedTest       = fmt.Errorf("store test failed")
+	errStoreFailedTest       = fmt.Errorf("store test failed")
 	errFetchSeedsFailedTest = fmt.Errorf("fetch seeds test fail")
 )
 
